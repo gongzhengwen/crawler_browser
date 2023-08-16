@@ -1,11 +1,15 @@
-项目参考：js逆向之模拟浏览器环境
+# 补环境框架实现
 
+项目参考
+
+    # js逆向之模拟浏览器环境
     https://hexo-fanchangrui.vercel.app/2022/08/05/js%E9%80%86%E5%90%91%E4%B9%8B%E6%A8%A1%E6%8B%9F%E6%B5%8F%E8%A7%88%E5%99%A8%E7%8E%AF%E5%A2%83/
 
-# 补环境框架实现
+文件目录
+
 ```
 .
-├── CatVm2                                       文件目录
+├── CatVm2                                       主程序目录
 │   ├── browser                                  浏览器环境
 │   │    ├── HTMLElements
 │   │    │     ├── htmlDivElement.js
@@ -36,100 +40,3 @@
 ├── index.js                                     启动代码
 ├── README.md                                    文档
 ```
-
-## 补window环境，原型链
-
-![debugger](./img/1.png)
-
-先尝试补一个window原型WINDOW_AYF
-
-```javascript
-function WINDOW_AYF(){}
-
-window_ayf = {};
-
-window_ayf.__proto__ = WINDOW_AYF.prototype;
-
-Object.defineProperties(WINDOW_AYF.prototype,{
-    [Symbol.toStringTag]:{
-        value:'WINDOW_AYF',
-        configurable:true,
-    }
-})
-```
-控制台对比效果
-
-![debugger](./img/2.png)
-
-在构建原型`WindowProperties_ayf`
-
-```javascript
-function WINDOW_AYF(){}
-
-window_ayf = {};
-
-window_ayf.__proto__ = WINDOW_AYF.prototype;
-
-Object.defineProperties(WINDOW_AYF.prototype,{
-    [Symbol.toStringTag]:{
-        value:'WINDOW_AYF',
-        configurable:true,
-    }
-})
-
-function WindowProperties_ayf(){}
-
-WINDOW_AYF.prototype.__proto__ = WindowProperties_ayf.prototype;
-
-Object.defineProperties(WindowProperties_ayf.prototype,{
-    [Symbol.toStringTag]:{
-        value:'WindowProperties_ayf',
-        configurable:true,
-    }
-})
-```
-控制台对比效果
-
-![debugger](./img/3.png)
-
-最后构建原型`EventTarget_ayf`
-
-```javascript
-function WINDOW_AYF(){}
-
-window_ayf = {};
-
-window_ayf.__proto__ = WINDOW_AYF.prototype;
-
-Object.defineProperties(WINDOW_AYF.prototype,{
-    [Symbol.toStringTag]:{
-        value:'WINDOW_AYF',
-        configurable:true,
-    }
-})
-
-function WindowProperties_ayf(){}
-
-WINDOW_AYF.prototype.__proto__ = WindowProperties_ayf.prototype;
-
-Object.defineProperties(WindowProperties_ayf.prototype,{
-    [Symbol.toStringTag]:{
-        value:'WindowProperties_ayf',
-        configurable:true,
-    }
-})
-
-function EventTarget_ayf(){}
-
-WindowProperties_ayf.prototype.__proto__ = EventTarget_ayf.prototype;
-
-Object.defineProperties(EventTarget_ayf.prototype,{
-    [Symbol.toStringTag]:{
-        value:'EventTarget_ayf',
-        configurable:true,
-    }
-})
-```
-控制台对比效果
-
-![debugger](./img/4.png)
