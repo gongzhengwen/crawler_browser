@@ -17,7 +17,7 @@ Object.defineProperties(Document.prototype, {
 document = {}
 document.__proto__ = Document.prototype
 document.cookie = ''
-document.referrer = location.href || ''
+document.referrer = 'https://www.douyin.com/search/%E8%BD%A6%E4%BF%9D%E7%BD%97?aid=0bba63fe-136f-4dfd-aa22-e9430f362521&enter_from=live_detail&source=search_history'
 document.getElementById = function getElementById(id) {
     // 用id匹配当前环境已有的元素
     return null

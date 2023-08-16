@@ -19,26 +19,35 @@ catvm.safefunction(window.setTimeout);
 
 Window.prototype.PERSISTENT = 1;
 Window.prototype.TEMPORARY = 0;
+window.Object = Object;
 window.open = function open() {
-};
-window.chrome = catvm.proxy(class chrome {
-});
-window.DeviceOrientationEvent = function DeviceOrientationEvent() {
-};
-window.DeviceMotionEvent = function DeviceMotionEvent() {
+    debugger;
 };
 catvm.safefunction(window.open);
+
+window.chrome = catvm.proxy(class chrome {});
+
+window.DeviceOrientationEvent = function DeviceOrientationEvent() {
+    debugger;
+};
 catvm.safefunction(window.DeviceOrientationEvent);
+
+window.DeviceMotionEvent = function DeviceMotionEvent() {
+    debugger;
+};
 catvm.safefunction(window.DeviceMotionEvent);
 
-window.localStorage = class localStorage {
-};
+window.localStorage = class localStorage {};
 window.localStorage.getItem = function getItem() {
-};
-window.localStorage.setItem = function getItem() {
+    debugger;
 };
 catvm.safefunction(window.localStorage.getItem);
+
+window.localStorage.setItem = function setItem() {
+    debugger;
+};
 catvm.safefunction(window.localStorage.setItem);
+
 catvm.proxy(window.localStorage);
 Window.prototype.__proto__ = windowProperties.prototype;
 window.__proto__ = Window.prototype;

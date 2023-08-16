@@ -22,7 +22,7 @@ Object.getOwnPropertyDescriptor = function (tag, val) {
 ////////////////原型-补环境-start////////////////
 Navigator.prototype.plugins = []
 Navigator.prototype.language = ['zh-CN']
-Navigator.prototype.userAgent = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36'
+Navigator.prototype.userAgent = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
 ////////////////原型-补环境-end//////////////////
 
 // 解决实例可以调用属性，但是原型对象不能调用属性
