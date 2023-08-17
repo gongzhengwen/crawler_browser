@@ -37,7 +37,6 @@ document.createElement = function createElement(tagName) {
         debugger;
     }
     return catvm.proxy(catvm.memory.htmlElements[tagname]())
-
 }
 catvm.safefunction(document.createElement)
 ////////////////实例-补环境-end//////////////////

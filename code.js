@@ -1,11 +1,7 @@
+Date.prototype.getTime = function () {return 1};
+
 var glb;
-
-Date.prototype.getTime = function() {
-    return 1
-}
-;
-
-(glb = "undefined" == typeof window ? global : window)._$jsvmprt = function(b, e, f) {
+(glb = "undefined" == typeof window ? global : window)._$jsvmprt = function (b, e, f) {
     function a() {
         if ("undefined" == typeof Reflect || !Reflect.construct)
             return !1;
@@ -14,15 +10,17 @@ Date.prototype.getTime = function() {
         if ("function" == typeof Proxy)
             return !0;
         try {
-            return Date.prototype.toString.call(Reflect.construct(Date, [], (function() {}
+            return Date.prototype.toString.call(Reflect.construct(Date, [], (function () {
+                }
             ))),
                 !0
         } catch (b) {
             return !1
         }
     }
+
     function d(b, e, f) {
-        return (d = a() ? Reflect.construct : function(b, e, f) {
+        return (d = a() ? Reflect.construct : function (b, e, f) {
                 var a = [null];
                 a.push.apply(a, e);
                 var d = new (Function.bind.apply(b, a));
@@ -31,28 +29,31 @@ Date.prototype.getTime = function() {
             }
         ).apply(null, arguments)
     }
+
     function c(b, e) {
-        return (c = Object.setPrototypeOf || function(b, e) {
+        return (c = Object.setPrototypeOf || function (b, e) {
                 return b.__proto__ = e,
                     b
             }
         )(b, e)
     }
+
     function n(b) {
-        return function(b) {
+        return function (b) {
             if (Array.isArray(b)) {
                 for (var e = 0, f = new Array(b.length); e < b.length; e++)
                     f[e] = b[e];
                 return f
             }
-        }(b) || function(b) {
+        }(b) || function (b) {
             if (Symbol.iterator in Object(b) || "[object Arguments]" === Object.prototype.toString.call(b))
                 return Array.from(b)
-        }(b) || function() {
+        }(b) || function () {
             throw new TypeError("Invalid attempt to spread non-iterable instance")
         }()
     }
-    for (var i = [], r = 0, t = [], o = 0, l = function(b, e) {
+
+    for (var i = [], r = 0, t = [], o = 0, l = function (b, e) {
         var f = b[e++]
             , a = b[e]
             , d = parseInt("" + f + a, 16);
@@ -69,20 +70,20 @@ Date.prototype.getTime = function() {
             return d &= 63,
                 [3, i = (d <<= 16) + (n <<= 8) + i]
         }
-    }, u = function(b, e) {
+    }, u = function (b, e) {
         var f = parseInt("" + b[e] + b[e + 1], 16);
         return f = f > 127 ? -256 + f : f
-    }, s = function(b, e) {
+    }, s = function (b, e) {
         var f = parseInt("" + b[e] + b[e + 1] + b[e + 2] + b[e + 3], 16);
         return f = f > 32767 ? -65536 + f : f
-    }, p = function(b, e) {
+    }, p = function (b, e) {
         var f = parseInt("" + b[e] + b[e + 1] + b[e + 2] + b[e + 3] + b[e + 4] + b[e + 5] + b[e + 6] + b[e + 7], 16);
         return f = f > 2147483647 ? 0 + f : f
-    }, y = function(b, e) {
+    }, y = function (b, e) {
         return parseInt("" + b[e] + b[e + 1], 16)
-    }, v = function(b, e) {
+    }, v = function (b, e) {
         return parseInt("" + b[e] + b[e + 1] + b[e + 2] + b[e + 3], 16)
-    }, g = g || this || window, h = Object.keys || function(b) {
+    }, g = g || this || window, h = Object.keys || function (b) {
         var e = {}
             , f = 0;
         for (var a in b)
@@ -163,8 +164,9 @@ Date.prototype.getTime = function() {
     }
         , B = []
         , W = [];
+
     function F(b, e, f) {
-        for (var a = e; a < e + f; ) {
+        for (var a = e; a < e + f;) {
             var d = y(b, a);
             B[a] = d,
                 a += 2;
@@ -177,14 +179,16 @@ Date.prototype.getTime = function() {
                 a += 4)
         }
     }
+
     return K(b, E, O / 2, [], e, f);
+
     function G(b, e, f, a, c, l, m, I) {
         null == l && (l = this);
         var C, q, w, S = [], R = 0;
         m && (C = m);
         var x, z, O = e, E = O + 2 * f;
         if (!I)
-            for (; O < E; ) {
+            for (; O < E;) {
                 var j = parseInt("" + b[O] + b[O + 1], 16);
                 O += 2;
                 var A = 3 & (x = 13 * j % 241);
@@ -347,7 +351,7 @@ Date.prototype.getTime = function() {
                         else
                             A < 6 ? (C = S[R--],
                                 S[R] = S[R] % C) : A < 8 ? (C = S[R--],
-                                S[R] = S[R]instanceof C) : A < 15 && (S[++R] = !1)
+                                S[R] = S[R] instanceof C) : A < 15 && (S[++R] = !1)
                     } else if (A > 0) {
                         (A = x) < 1 ? S[++R] = g : A < 3 ? (C = S[R--],
                             S[R] = S[R] + C) : A < 5 ? (C = S[R--],
@@ -387,7 +391,7 @@ Date.prototype.getTime = function() {
                             var D = 0
                                 , T = S[R].length
                                 , $ = S[R];
-                            S[++R] = function() {
+                            S[++R] = function () {
                                 var b = D < T;
                                 if (b) {
                                     var e = $[D++];
@@ -400,7 +404,7 @@ Date.prototype.getTime = function() {
                                 O += 2,
                                 C = c[z],
                                 S[++R] = C) : A < 7 ? S[R] = ++S[R] : A < 9 && (C = S[R--],
-                                S[R] = S[R]in C)
+                                S[R] = S[R] in C)
                     } else {
                         if ((A = x) > 13)
                             C = S[R],
@@ -425,7 +429,7 @@ Date.prototype.getTime = function() {
                 }
             }
         if (I)
-            for (; O < E; ) {
+            for (; O < E;) {
                 j = B[O];
                 O += 2;
                 A = 3 & (x = 13 * j % 241);
@@ -566,7 +570,7 @@ Date.prototype.getTime = function() {
                         } else
                             A < 4 ? S[R--] ? O += 4 : O += 2 * (z = W[O]) - 2 : A < 6 ? (C = S[R--],
                                 S[R] = S[R] % C) : A < 8 ? (C = S[R--],
-                                S[R] = S[R]instanceof C) : A < 15 && (S[++R] = !1)
+                                S[R] = S[R] instanceof C) : A < 15 && (S[++R] = !1)
                     } else {
                         (A = x) > 7 ? (C = S[R--],
                             S[R] = S[R] | C) : A > 5 ? (z = W[O],
@@ -593,7 +597,7 @@ Date.prototype.getTime = function() {
                     } else if (A > 0) {
                         if ((A = x) > 7)
                             C = S[R--],
-                                S[R] = S[R]in C;
+                                S[R] = S[R] in C;
                         else if (A > 5)
                             S[R] = ++S[R];
                         else if (A > 3)
@@ -605,7 +609,7 @@ Date.prototype.getTime = function() {
                             D = 0,
                                 T = S[R].length,
                                 $ = S[R];
-                            S[++R] = function() {
+                            S[++R] = function () {
                                 var b = D < T;
                                 if (b) {
                                     var e = $[D++];
@@ -634,6 +638,7 @@ Date.prototype.getTime = function() {
             }
         return [0, null]
     }
+
     function K(b, e, f, a, d, c, n, i) {
         var r, t;
         null == c && (c = this),
