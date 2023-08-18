@@ -61,7 +61,6 @@ window, setTimeout = function setTimeout(callback, delay) {
 
 Window.prototype.PERSISTENT = 1;
 Window.prototype.TEMPORARY = 0;
-window.Object = Object;
 window.open = function open() {
     debugger;
 };

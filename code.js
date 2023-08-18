@@ -1,4 +1,10 @@
-Date.prototype.getTime = function () {return 1};
+Date.prototype.getTime = function () {
+    return 1
+};
+
+Math.random = function() {
+    return 0.1
+};
 
 var glb;
 (glb = "undefined" == typeof window ? global : window)._$jsvmprt = function (b, e, f) {
@@ -257,7 +263,7 @@ var glb;
                                 S[R] = S[R] & C;
                         else if (A > 5)
                             z = y(b, O),
-                                O += 2,
+                                O += 2, console.log(S, R, S[R]),
                                 S[R -= z] = 0 === z ? new S[R] : d(S[R], n(S.slice(R + 1, R + z + 1)));
                         else if (A > 3) {
                             z = s(b, O);
